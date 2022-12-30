@@ -36,9 +36,20 @@ if [[ ! -d "$HOME/.config/kitty" ]]
 then
 	mkdir $HOME/.kitty
 	git clone --depth 1 https://github.com/dexpota/kitty-themes.git ~/.config/kitty/kitty-themes
-	ln -sfn ~/.config/kitty/kitty-themes/themes/Tomorrow_Night_Blue.conf ~/.config/kitty/theme.conf
 fi
 
+ln -sfn ~/.config/kitty/kitty-themes/themes/Tomorrow_Night_Blue.conf ~/.config/kitty/theme.conf
 ln -sfn ~/.dotfiles/kitty/kitty.conf ~/.config/kitty/kitty.conf
+
+#: }}}
+
+#: vim {{{
+
+if [[ ! -d "$HOME/.config/nvim" ]]
+then
+	mkdir -p $HOME/.config/nvim/after/plugin
+fi
+
+ln -sfn ~/.dotfiles/nvim/init.lua ~/.config/nvim/init.lua
 
 #: }}}
