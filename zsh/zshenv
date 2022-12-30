@@ -1,0 +1,22 @@
+# vim:fileencoding=utf-8:foldmethod=marker
+
+if [[ $(uname) == 'Darwin' ]]
+then
+	path+=(/usr/local/bin)
+fi
+
+if [ -d "$HOME/.local/bin" ] ; then
+	path+=($HOME/.local/bin)
+fi
+
+export VISUAL=nvim
+export EDITOR=$VISUAL
+
+#: pnpm {{{
+
+export PNPM_HOME=$HOME/.local/share/pnpm
+path+=($PNPM_HOME)
+
+#: }}}
+
+. "$HOME/.cargo/env"
