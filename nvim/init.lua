@@ -427,10 +427,11 @@ cmp.setup {
 }
 
 -- custom
-
-vim.keymap.set('n', '<c-w>s', function () return vim.cmd [[vsplit]] end, { desc = 'Split' })
-vim.keymap.set('n', '<c-w>v', function () return vim.cmd [[split]] end, { desc = 'Vertical Split' })
-vim.keymap.set('i', 'jk', '<esc>', { desc = 'Escape input mode' })
+vim.keymap.set('', '<C-a>', '<NOP>')
+vim.keymap.set('', '<C-x>', '<NOP>')
+vim.keymap.set('n', '<C-w>s', function () return vim.cmd [[vsplit]] end, { desc = 'Split' })
+vim.keymap.set('n', '<C-w>v', function () return vim.cmd [[split]] end, { desc = 'Vertical Split' })
+vim.keymap.set('i', 'jk', '<Esc>', { desc = 'Escape input mode' })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
