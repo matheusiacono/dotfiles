@@ -37,7 +37,7 @@ then
 	git clone --depth 1 https://github.com/dexpota/kitty-themes.git ~/.config/kitty/kitty-themes
 fi
 
-ln -sfn ~/.config/kitty/kitty-themes/themes/Tomorrow_Night_Blue.conf ~/.config/kitty/theme.conf
+ln -sfn ~/.config/kitty/kitty-themes/themes/Tomorrow_Night.conf ~/.config/kitty/theme.conf
 ln -sfn ~/.dotfiles/kitty/kitty.conf ~/.config/kitty/kitty.conf
 
 #: }}}
