@@ -26,7 +26,6 @@ then
 fi
 
 ln -sfn $HOME/.dotfiles/zsh/zshrc $HOME/.zshrc
-ln -sfn $HOME/.dotfiles/zsh/zshenv $HOME/.zshenv
 
 #: }}}
 

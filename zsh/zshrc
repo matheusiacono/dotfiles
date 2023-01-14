@@ -1,5 +1,17 @@
 # vim:fileencoding=utf-8:foldmethod=marker
 
+if [[ $(uname) == 'Darwin' ]]
+then
+	path+=(/usr/local/bin)
+fi
+
+if [ -d "$HOME/.local/bin" ] ; then
+	path+=($HOME/.local/bin)
+fi
+
+export VISUAL=nvim
+export EDITOR=$VISUAL
+
 #: brew {{{
 
 if [[ $(uname) == 'Darwin' ]]
@@ -112,5 +124,14 @@ alias cat="bat"
 [[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
 
 #: }}}
+
+#: pnpm {{{
+
+export PNPM_HOME=$HOME/.local/share/pnpm
+path=($PNPM_HOME $path)
+
+#: }}}
+
+. "$HOME/.cargo/env"
 
 export NPM_TOKEN=op://Coding/GitHub/SECURITY/GH_PACKAGE_TOKEN
