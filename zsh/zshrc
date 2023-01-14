@@ -134,4 +134,6 @@ path=($PNPM_HOME $path)
 
 . "$HOME/.cargo/env"
 
+export GOPATH=$HOME/.go
+
 export NPM_TOKEN=op://Coding/GitHub/SECURITY/GH_PACKAGE_TOKEN
