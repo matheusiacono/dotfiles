@@ -42,13 +42,29 @@ ln -sfn ~/.dotfiles/kitty/kitty.conf ~/.config/kitty/kitty.conf
 
 #: }}}
 
-#: vim {{{
+#: nvim {{{
 
 if [[ ! -d "$HOME/.config/nvim" ]]
 then
-	mkdir -p $HOME/.config/nvim/after/plugin
+	mkdir -p $HOME/.config/nvim
 fi
 
 ln -sfn ~/.dotfiles/nvim/init.lua ~/.config/nvim/init.lua
+
+#: }}}
+
+#: lvim {{{
+
+if [[ ! -d "$HOME/.local/share/lunarvim" ]]
+then
+	bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
+fi
+
+if [[ ! -d "$HOME/.config/lvim" ]]
+then
+	mkdir -p $HOME/.config/lvim
+fi
+
+ln -sfn ~/.dotfiles/lvim/config.lua ~/.config/lvim/config.lua
 
 #: }}}
